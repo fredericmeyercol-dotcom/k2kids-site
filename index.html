@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Pinewood Family – Fictional Demo</title>
+<style>
+:root{--bg:#fff8ee;--ink:#2b2a33;--a:#ff7a59;--b:#3fa7d6;--c:#59cd90;--d:#fac05e;--card:#fff;--line:#eadfcf}
+@media(prefers-color-scheme:dark){:root{--bg:#1d1c24;--ink:#f3eee6;--card:#2a2833;--line:#3b384a}}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+.banner{background:var(--d);color:#2b2a33;text-align:center;padding:.4rem 1rem;font-size:.85rem;font-weight:600}
+header{display:flex;justify-content:space-between;align-items:center;padding:1rem 5vw;flex-wrap:wrap;gap:.5rem}
+.logo{font-size:1.5rem;font-weight:800}.logo span{color:var(--a)}
+nav a{margin-left:1rem;color:inherit;text-decoration:none;font-weight:600}nav a:hover{color:var(--a)}
+.hero{text-align:center;padding:3rem 5vw}.hero h1{font-size:clamp(2rem,6vw,3.5rem);margin:.2em 0}
+.btn{display:inline-block;background:var(--a);color:#fff;border:0;border-radius:2rem;padding:.7rem 1.6rem;font-size:1rem;font-weight:700;cursor:pointer;text-decoration:none}
+.btn.alt{background:var(--b)}
+section{padding:2rem 5vw;max-width:1100px;margin:auto}
+h2{margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:1.2rem;text-decoration:none;color:inherit;display:block;transition:transform .15s}
+.card:hover{transform:translateY(-3px)}.card .e{font-size:2rem}
+.card:nth-child(4n+1){border-top:5px solid var(--a)}.card:nth-child(4n+2){border-top:5px solid var(--b)}
+.card:nth-child(4n+3){border-top:5px solid var(--c)}.card:nth-child(4n){border-top:5px solid var(--d)}
+.login{background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:1.5rem;max-width:380px;margin:auto}
+.login label{display:block;font-weight:600;margin-top:.8rem}
+.login input{width:100%;padding:.6rem;border:1px solid var(--line);border-radius:.5rem;background:var(--bg);color:var(--ink);font-size:1rem}
+#msg{margin-top:1rem;font-size:.9rem;min-height:1.4em}
+footer{text-align:center;padding:2rem;font-size:.85rem;opacity:.7}
+</style></head><body>
+<div class="banner">Fictional demo site – not a real service. Nothing on this page is stored or sent anywhere.</div>
+<header><div class="logo">Pine<span>wood</span> Family</div>
+<nav><a href="#links">Links</a><a href="#news">News</a><a href="#login">Member Area</a></nav></header>
+
+<div class="hero"><h1>Welcome to the Pinewood Family Hub 🌲</h1>
+<p>A made-up home on the web for a made-up family. Explore, click around, nothing is real.</p>
+<a class="btn" href="#links">Explore links</a> <a class="btn alt" href="#login">Member login</a></div>
+
+<section id="links"><h2>Family links</h2><div class="grid">
+<a class="card" href="#links"><div class="e">📅</div><b>Family Calendar</b><br>Who is where, and when (fictional).</a>
+<a class="card" href="#links"><div class="e">🖼️</div><b>Photo Album</b><br>Holidays, birthdays, pet goldfish.</a>
+<a class="card" href="#links"><div class="e">⚽</div><b>Football Corner</b><br>Match schedule for the Pinewood Pandas.</a>
+<a class="card" href="#links"><div class="e">🍝</div><b>Recipe Box</b><br>Pasta Fridays and pancake Sundays.</a>
+<a class="card" href="#links"><div class="e">📚</div><b>Homework Help</b><br>Pretend study resources.</a>
+<a class="card" href="#links"><div class="e">🎮</div><b>Game Night</b><br>Scoreboard for family board games.</a>
+<a class="card" href="#links"><div class="e">🏡</div><b>House Rules</b><br>Shoes off, fun on.</a>
+<a class="card" href="#login"><div class="e">🔐</div><b>Member Area</b><br>Fake login, jump to the form.</a>
+</div></section>
+
+<section id="news"><h2>Latest news (all invented)</h2><div class="grid">
+<div class="card"><b>Pandas win 3–2!</b><br>Nobody can agree who scored the winner.</div>
+<div class="card"><b>Pancake record</b><br>Sunday stack reached 14 layers.</div>
+<div class="card"><b>New fish</b><br>Goldfish #4 is called Sir Bubbles.</div>
+</div></section>
+
+<section id="login"><h2 style="text-align:center">Member Area</h2>
+<form class="login" id="f" autocomplete="off">
+<b>Sign in (demo only)</b>
+<label for="u">Family nickname</label><input id="u" name="u" placeholder="e.g. captain-pancake">
+<label for="p">Secret word</label><input id="p" type="password" placeholder="anything, it is ignored">
+<p><button class="btn" type="submit" style="width:100%">Sign in</button></p>
+<div id="msg" role="status"></div>
+<small>This form is decorative. It has no server behind it and never transmits what you type. Please do not enter real passwords.</small>
+</form></section>
+
+<footer>© Pinewood Family (fictional) · Built for fun on a private home server · Not a live website</footer>
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+ e.preventDefault();
+ document.getElementById('p').value='';
+ document.getElementById('msg').textContent='🎈 Demo only: there is no real member area. Nothing was sent or saved.';
+});
+</script></body></html>
